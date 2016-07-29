@@ -1,0 +1,5 @@
+[DATA: 29-07-2016 04:08:36]  GET request from IP: ::1 Status: 200
+[DATA: 29-07-2016 04:08:50]  GET request from IP: ::1 Status: 200
+[DATA: 29-07-2016 04:09:19]  PUT request from IP: ::1 Status: 404 Error: Void Request!
+[DATA: 29-07-2016 04:09:38]  POST request from IP: ::1 Status: 400 Error: Username Superman56 already exists!
+[DATA: 29-07-2016 04:09:56]  GET request from IP: ::1 Status: 404 Error: No user found for this id!
