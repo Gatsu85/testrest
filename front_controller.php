@@ -1,6 +1,10 @@
 <?php
 
-/* Front Controller  */
+/* Front Controller 
+ Get the URI request and derives the class to call. Request at the Hendler to return 
+ the request method and to parse the body of the request. Once had the answer, it sends 
+ the data to access data object associated at the class, calling the function associated 
+ at the method. Finally, it returns the status of the request and the response to the request. */
 
 require_once("includes/handler.php");
 
@@ -15,7 +19,7 @@ if (isset($_SERVER['REQUEST_URI'])){
 		case "users":
 			require_once("users/model/user_dao.php");
 			$user_handler = new Handler();
-			$function = $user_handler->get_request_method();
+			$function = $user_handler->getMethod();
 			$user_id = (int)$domain[3];
 			
 			/* userS function select */
@@ -24,7 +28,7 @@ if (isset($_SERVER['REQUEST_URI'])){
 				case "GET":
 					if ($domain[3] != "" ){
 						$user = new User_DAO();
-						$response = $user->GetSingle($user_id);
+						$response = $user->getSingle($user_id);
 						if (!empty($response)){
 							echo $user_handler->response($response);
 						} else {
@@ -34,7 +38,7 @@ if (isset($_SERVER['REQUEST_URI'])){
 						}
 					} else {
 						$user = new User_DAO();
-						$response = $user->GetAll();
+						$response = $user->getAll();
 						echo $user_handler->response($response);
 					}
 					break;
@@ -60,7 +64,7 @@ if (isset($_SERVER['REQUEST_URI'])){
 					$user_id = (int)$domain[3];
 					if ($domain[3] != "" ){
 						$user = new User_DAO();
-						$response = $user->Delete($user_id);
+						$response = $user->delete($user_id);
 						if ($response>0){
 							$response = "User with id ".$user_id." has been deleted!";
 							echo $user_handler->response($response);
@@ -80,7 +84,7 @@ if (isset($_SERVER['REQUEST_URI'])){
 					$data = $user_handler->inputs();
 					if ($domain[3] != "" && !empty($data)){
 						$user = new User_DAO();
-						$response = $user->Update($user_id,$data);
+						$response = $user->update($user_id,$data);
 						if ($response>0){
 							$status = 201;
 							echo $user_handler->response($response,$status);
