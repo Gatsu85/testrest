@@ -1,5 +1,13 @@
 {
     "require": {
         "monolog/monolog": "1.0.*"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+			"testrest\\": "src/",
+            "testrest\\users\\": "Classes/users/model/",
+            "testrest\\conn_db\\": "Config/"			
+        }
     }
 }

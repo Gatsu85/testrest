@@ -1,10 +1,12 @@
 <?php
 
+namespace testrest\users;
+
 /* User_DAO class
 Is the data access object associated at Users class. Get the parsed request from the front_controller
 and read or write it from the database. */
 
-require 'users.php';
+use testrest\users\users;
 require './src/Config/conn_db.php';
 
 class User_DAO{

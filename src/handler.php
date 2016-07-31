@@ -1,5 +1,5 @@
 <?php
-
+namespace testrest;
 /* Handler 
 Parse the request data and the data response, and return it at front_controller.
 */
@@ -62,7 +62,13 @@ class Handler {
 		}
 		return $parsed_input;
 	}
-		
+	
+	/* Returns the data object access class for the class requested */
+	
+	function requireClassDao($name){
+		$classDao = './src/Classes/' . $name . '/model/' . $name . '_dao.php';
+		return $classDao;
+	}
 	// Response Function
 	
 	/* Parse the response of the request and return it */
