@@ -3,5 +3,5 @@ Options +FollowSymlinks
 RewriteEngine on
 
 # map neat URL to internal URL
-RewriteRule ^users/$   front_controller.php [nc,qsa]
-RewriteRule ^users/([0-9]+)/$   front_controller.php [nc,qsa]
+RewriteRule ^users/$   index.php [nc,qsa]
+RewriteRule ^users/([0-9]+)/$   index.php [nc,qsa]
