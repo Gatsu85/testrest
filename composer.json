@@ -6,8 +6,7 @@
     "autoload": {
         "psr-4": {
 			"testrest\\": "src/",
-            "testrest\\users\\": "Classes/users/model/",
-            "testrest\\conn_db\\": "Config/"			
+            "testrest\\users\\": "Classes/users/model/"			
         }
     }
 }

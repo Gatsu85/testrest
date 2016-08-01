@@ -10,7 +10,6 @@ class ComposerStaticInit3167937023647e0667169bdc76428183
         't' => 
         array (
             'testrest\\users\\' => 15,
-            'testrest\\conn_db\\' => 17,
             'testrest\\' => 9,
         ),
     );
@@ -19,10 +18,6 @@ class ComposerStaticInit3167937023647e0667169bdc76428183
         'testrest\\users\\' => 
         array (
             0 => __DIR__ . '/../..' . '/Classes/users/model',
-        ),
-        'testrest\\conn_db\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/Config',
         ),
         'testrest\\' => 
         array (

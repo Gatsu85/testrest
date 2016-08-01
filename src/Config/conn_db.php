@@ -1,7 +1,5 @@
 <?php
 
-//namespace testrest\conn_db;
-
 function connect(){
 
 	$db_host = "127.0.0.1";
